@@ -20,7 +20,7 @@ public class IncrementalTest extends TestCase{
     }
 
     @Test
-    public void addMemberTest() {
+    public void testAddMember() {
         Integer sizeBeforeM = ctrl.allMembers().size();
 
         ctrl.addMember(new Member("Adrian","4"));
@@ -28,7 +28,7 @@ public class IncrementalTest extends TestCase{
     }
 
     @Test
-    public void addEntryandMemberTest() {
+    public void testAddEntryandMember() {
         Integer sizeBeforeM = ctrl.allMembers().size();
         Integer sizeBeforeE = ctrl.allEntries().size();
         ctrl.addMember(new Member("Diana","2"));
@@ -38,7 +38,7 @@ public class IncrementalTest extends TestCase{
     }
 
     @Test
-    public void getEntries() {
+    public void testGetEntries() {
         Integer sizeBeforeE = ctrl.allEntries().size();
         Integer sizeBeforeM = ctrl.allMembers().size();
         ctrl.addMember(new Member("Cristi","3"));
