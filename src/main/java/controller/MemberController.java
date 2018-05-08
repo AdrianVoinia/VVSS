@@ -38,4 +38,11 @@ public class MemberController {
         allE = this.mr.getAllEntries();
         return allE;
     }
+
+    public List<Member> allMembers(){
+
+        List<Member> allM=new ArrayList<Member>();
+        allM=this.mr.getAllMember();
+        return  allM;
+    }
 } 

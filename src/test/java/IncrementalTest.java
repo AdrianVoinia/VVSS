@@ -18,29 +18,30 @@ public class IncrementalTest{
 
     @Test
     public void addMemberTest() {
+        Integer sizeBeforeM = ctrl.allMembers().size();
+
         ctrl.addMember(new Member("Adrian","4"));
-        assert(ctrl.allEntries().size() == 1);
+        assert(ctrl.allMembers().size() == sizeBeforeM+1);
     }
 
     @Test
     public void addEntryandMemberTest() {
-        System.out.println(ctrl.allEntries().size());
+        Integer sizeBeforeM = ctrl.allMembers().size();
+        Integer sizeBeforeE = ctrl.allEntries().size();
         ctrl.addMember(new Member("Diana","2"));
-        System.out.println(ctrl.allEntries().size());
-        assert(ctrl.allEntries().size() == 1);
+        assert(ctrl.allMembers().size() == sizeBeforeM+1);
         ctrl.addEntry(new Entry("cost",10,4,2));
-        assert (ctrl.allEntries().size() == 1);
+        assert (ctrl.allEntries().size() == sizeBeforeE+1);
     }
 
     @Test
     public void getEntries() {
-        Integer sizeBefore = ctrl.allEntries().size();
+        Integer sizeBeforeE = ctrl.allEntries().size();
+        Integer sizeBeforeM = ctrl.allMembers().size();
         ctrl.addMember(new Member("Cristi","3"));
-        assert(ctrl.allEntries().size() == 1);
+        assert(ctrl.allMembers().size() == sizeBeforeM+1);
         ctrl.addEntry(new Entry("income",6,7,3));
-        assert (ctrl.allEntries().size() == 1);
+        assert (ctrl.allEntries().size() == sizeBeforeE+1);
 
-        Integer sizeAfter = ctrl.allEntries().size();
-        assert (sizeAfter == sizeBefore+1);
     }
 }

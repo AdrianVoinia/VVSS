@@ -69,6 +69,7 @@ public class MemberRepository {
 	 public void addMember(Member m){
 		 members.add(m);		 	 
 	 }
+
 	 public void addEntry(Entry e){
 		 entries.add(e);		 	 
 	 }
@@ -76,4 +77,8 @@ public class MemberRepository {
 		 
 		 return entries;
 	 }
+	public List<Member> getAllMember(){
+
+		return members;
+	}
 }
