@@ -1,12 +1,15 @@
 import controller.MemberController;
 import model.Entry;
 import model.Member;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import repository.MemberRepository;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
-public class IncrementalTest{
+@RunWith(JUnit4.class)
+public class IncrementalTest extends TestCase{
     MemberRepository repo;
     MemberController ctrl;
 
